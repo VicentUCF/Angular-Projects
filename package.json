@@ -16,7 +16,8 @@
     "build": "npm run build --workspace=HeroesApp",
     "start": "npm run start --workspace=HeroesApp",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "co": "sui-mono commit"
   },
   "keywords": [],
   "author": "",
@@ -30,5 +31,8 @@
     "path": "0.12.7",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1"
+  },
+  "dependencies": {
+    "@s-ui/mono": "^2.31.0"
   }
 }
