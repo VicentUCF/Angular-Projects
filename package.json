@@ -8,10 +8,13 @@
     "PaisesApp",
     "PipesApp"
   ],
+  "engines": {
+    "node": "v18.9.0"
+  },
   "main": "index.js",
   "scripts": {
-    "build:heroes": "npm run build --workspace=HeroesApp",
-    "start:heroes": "npm run start --workspace=HeroesApp"
+    "build": "npm run build --workspace=HeroesApp",
+    "start": "npm run start --workspace=HeroesApp"
   },
   "keywords": [],
   "author": "",
