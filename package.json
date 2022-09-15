@@ -1,0 +1,19 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "HeroesApp",
+    "PaisesApp",
+    "PipesApp"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build:heroes": "npm run build --workspace=HeroesApp",
+    "start:heroes": "npm run start --workspace=HeroesApp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
