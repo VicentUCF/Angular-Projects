@@ -8,9 +8,8 @@ describe('NoComunesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NoComunesComponent ]
-    })
-    .compileComponents();
+      declarations: [NoComunesComponent]
+    }).compileComponents();
   });
 
   beforeEach(() => {

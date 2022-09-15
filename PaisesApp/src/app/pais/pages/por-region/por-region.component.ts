@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PaisService } from '../../services/pais.service';
 import { Country } from '../../interfaces/pais.interface';
 
@@ -7,16 +7,17 @@ import { Country } from '../../interfaces/pais.interface';
   templateUrl: './por-region.component.html',
   styleUrls: ['./por-region.component.css']
 })
-export class PorRegionComponent implements OnInit {
-
+export class PorRegionComponent {
   regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
 
-  regionActiva: string = '';
+  regionActiva = '';
 
   paises: Country[] = [];
 
   activarRegion(region: string) {
-    if(this.regionActiva === region) { return; }
+    if (this.regionActiva === region) {
+      return;
+    }
     this.regionActiva = region;
     this.paises = [];
     this.getPaisesPorRegion(region);
@@ -24,22 +25,16 @@ export class PorRegionComponent implements OnInit {
 
   getCssClass(region: string) {
     return this.regionActiva === region
-          ? 'btn btn-primary ms-2'
-          : 'btn btn-outline-primary ms-2'
+      ? 'btn btn-primary ms-2'
+      : 'btn btn-outline-primary ms-2';
   }
 
   getPaisesPorRegion(region: string) {
-    this.PaisService.buscarPaisPorRegion(region)
-      .subscribe(paises => {
-        console.log(paises);
-        this.paises = paises;
-      }
-    );
+    this.PaisService.buscarPaisPorRegion(region).subscribe((paises) => {
+      console.log(paises);
+      this.paises = paises;
+    });
   }
 
-  constructor(private PaisService: PaisService) { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private PaisService: PaisService) {}
 }

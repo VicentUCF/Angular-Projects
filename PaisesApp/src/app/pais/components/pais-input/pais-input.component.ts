@@ -7,31 +7,25 @@ import { debounceTime, Subject } from 'rxjs';
   styleUrls: ['./pais-input.component.css']
 })
 export class PaisInputComponent implements OnInit {
-  ngOnInit(){
-    this.debouncer
-    .pipe(
-      debounceTime(300)
-    )
-    .subscribe(valor => {
+  ngOnInit() {
+    this.debouncer.pipe(debounceTime(300)).subscribe((valor) => {
       this.onDebounce.emit(valor);
-    })
+    });
   }
 
   @Output() onEnter: EventEmitter<string> = new EventEmitter<string>();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter<string>();
-  @Input() placeholder: string = "";
-
+  @Input() placeholder = '';
 
   debouncer: Subject<string> = new Subject<string>();
 
-  termino: string = '';
+  termino = '';
 
   buscar() {
     this.onEnter.emit(this.termino);
   }
 
-  teclaPresionada(){
+  teclaPresionada() {
     this.debouncer.next(this.termino);
   }
-
 }

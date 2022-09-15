@@ -8,20 +8,13 @@ import { Heroe } from '../../interfaces/heroes.interface';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-
   constructor(private heroesService: HeroesService) {}
 
   heroes: Heroe[] = [];
 
   ngOnInit(): void {
-
-    this.heroesService.getHeroes().subscribe(
-      heroes => {
-        this.heroes = heroes;
-      }
-    );
-
+    this.heroesService.getHeroes().subscribe((heroes) => {
+      this.heroes = heroes;
+    });
   }
-
-
 }

@@ -8,8 +8,7 @@ import { Heroe } from '../interfaces/heroes.interface';
   providedIn: 'root'
 })
 export class HeroesService {
-
-  private baseUrl: string = `${environment.apiUrl}/heroes`;
+  private baseUrl = `${environment.apiUrl}/heroes`;
 
   constructor(private http: HttpClient) {}
 
@@ -24,5 +23,4 @@ export class HeroesService {
   getSugerencias(termino: string): Observable<Heroe[]> {
     return this.http.get<Heroe[]>(`${this.baseUrl}?q=${termino}&_limit=6`);
   }
-
 }

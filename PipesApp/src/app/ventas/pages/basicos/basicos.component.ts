@@ -5,12 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './basicos.component.html',
   styleUrls: ['./basicos.component.css']
 })
-export class BasicosComponent{
-
-  nombreLower: string = 'vicent';
-  nombreUpper: string = 'VICENT';
-  nombreTitle: string = 'ViCeNt';
+export class BasicosComponent {
+  nombreLower = 'vicent';
+  nombreUpper = 'VICENT';
+  nombreTitle = 'ViCeNt';
 
   fecha: Date = new Date(); // Fecha actual
-
 }

@@ -7,15 +7,11 @@ import { Heroe } from '../../interfaces/heroes.interface';
   styleUrls: ['./heroe-targeta.component.css']
 })
 export class HeroeTargetaComponent implements OnInit {
-
   @Input() heroe!: Heroe;
-
-  constructor() { }
 
   ngOnInit(): void {
     if (!this.heroe) {
       throw new Error('No se ha definido el heroe');
     }
   }
-
 }

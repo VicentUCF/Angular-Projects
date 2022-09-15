@@ -8,27 +8,23 @@ import { PaisService } from '../../services/pais.service';
   styleUrls: ['./por-pais.component.css']
 })
 export class PorPaisComponent {
-
-  error: string = ""
+  error = '';
   paises: Country[] = [];
   paisesSugeridos: Country[] = [];
-  termino: string = "";
+  termino = '';
 
-  constructor(private PaisService: PaisService) { }
+  constructor(private PaisService: PaisService) {}
 
   buscar(termino: string) {
-    this.error = "";
-      this.PaisService.buscarPais(termino)
-      .subscribe((paises) => {
-        if(paises.length === 0) {
-          this.error = `No se encontraron paises con nombre: ${termino}`;
-          this.paises = [];
-        }
+    this.error = '';
+    this.PaisService.buscarPais(termino).subscribe((paises) => {
+      if (paises.length === 0) {
+        this.error = `No se encontraron paises con nombre: ${termino}`;
+        this.paises = [];
+      }
 
-        this.paises = paises;
-
-      });
-
+      this.paises = paises;
+    });
   }
 
   buscarSugerido(termino: string) {
@@ -37,14 +33,11 @@ export class PorPaisComponent {
   }
 
   sugerencias(termino: string) {
-    this.error = "";
+    this.error = '';
     this.termino = termino;
 
     this.PaisService.buscarPais(termino).subscribe((paises) => {
       this.paisesSugeridos = paises.splice(0, 5);
-    })
-
+    });
   }
-
-
 }

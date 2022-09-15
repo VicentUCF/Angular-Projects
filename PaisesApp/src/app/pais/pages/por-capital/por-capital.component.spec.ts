@@ -8,9 +8,8 @@ describe('PorCapitalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PorCapitalComponent ]
-    })
-    .compileComponents();
+      declarations: [PorCapitalComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PorCapitalComponent);
     component = fixture.componentInstance;

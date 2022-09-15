@@ -8,9 +8,8 @@ describe('PorPaisComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PorPaisComponent ]
-    })
-    .compileComponents();
+      declarations: [PorPaisComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PorPaisComponent);
     component = fixture.componentInstance;

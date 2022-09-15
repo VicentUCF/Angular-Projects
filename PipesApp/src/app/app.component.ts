@@ -7,13 +7,8 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
-  constructor(private primeNgConfig: PrimeNGConfig) {
-
-  }
+  constructor(private primeNgConfig: PrimeNGConfig) {}
   ngOnInit(): void {
     this.primeNgConfig.ripple = true;
   }
-
 }
-

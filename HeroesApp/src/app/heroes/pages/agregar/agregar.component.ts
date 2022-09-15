@@ -7,13 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./agregar.component.css']
 })
 export class AgregarComponent implements OnInit {
-
-  constructor(private activateRoute: ActivatedRoute) { }
+  constructor(private activateRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(({ id }) => {
       console.log(id);
     });
   }
-
 }

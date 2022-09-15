@@ -11,8 +11,6 @@ import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { VuelaPipe } from './pipes/vuela.pipe';
 import { OrdenarPipe } from './pipes/ordenar.pipe';
 
-
-
 @NgModule({
   declarations: [
     NumerosComponent,
@@ -23,10 +21,7 @@ import { OrdenarPipe } from './pipes/ordenar.pipe';
     VuelaPipe,
     OrdenarPipe
   ],
-  imports: [
-    CommonModule,
-    PrimeNgModule
-  ],
+  imports: [CommonModule, PrimeNgModule],
   exports: [
     NumerosComponent,
     NoComunesComponent,
@@ -34,4 +29,4 @@ import { OrdenarPipe } from './pipes/ordenar.pipe';
     OrdenarComponent
   ]
 })
-export class VentasModule { }
+export class VentasModule {}

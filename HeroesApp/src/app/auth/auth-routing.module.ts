@@ -5,7 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
   {
     path: '',
-    children:[
+    children: [
       {
         path: 'login',
         component: LoginComponent
@@ -16,21 +16,15 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'login',
+        redirectTo: 'login'
       }
     ]
   }
-]
-
-
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

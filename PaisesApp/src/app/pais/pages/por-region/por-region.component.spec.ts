@@ -8,9 +8,8 @@ describe('PorRegionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PorRegionComponent ]
-    })
-    .compileComponents();
+      declarations: [PorRegionComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PorRegionComponent);
     component = fixture.componentInstance;

@@ -10,26 +10,22 @@ import { Country } from '../../interfaces/pais.interface';
   styleUrls: ['./ver-pais.component.css']
 })
 export class VerPaisComponent implements OnInit {
-
   pais!: Country;
-  error: string = "";
+  error = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private PaisService: PaisService
-    ) { }
+  ) {}
 
   ngOnInit(): void {
-
     this.activatedRoute.params
-    .pipe(
-      switchMap(({ id }) => this.PaisService.getPaisPorCodigo(id)),
-      tap( console.log )
-    )
-    .subscribe((pais: Country[]) => {
-      this.pais = pais[0];
-    });
-
+      .pipe(
+        switchMap(({ id }) => this.PaisService.getPaisPorCodigo(id)),
+        tap(console.log)
+      )
+      .subscribe((pais: Country[]) => {
+        this.pais = pais[0];
+      });
   }
-
 }

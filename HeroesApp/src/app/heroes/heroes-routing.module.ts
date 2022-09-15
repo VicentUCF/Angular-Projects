@@ -34,19 +34,15 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'listado',
+        redirectTo: 'listado'
       }
     ]
   }
-]
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class HeroesRoutingModule { }
+export class HeroesRoutingModule {}

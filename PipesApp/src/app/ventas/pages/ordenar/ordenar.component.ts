@@ -7,36 +7,36 @@ import { Heroe, Color } from '../../interfaces/ventas.interfaces';
   styleUrls: ['./ordenar.component.css']
 })
 export class OrdenarComponent {
+  enMayusucla = true;
+  orderBy = '';
 
-  enMayusucla: boolean = true;
-  orderBy: string = '';
-
-  heroes: Heroe[] = [{
-    nombre: "Aquaman",
-    vuela: false,
-    color: Color.blue
-  },
-  {
-    nombre: "Superman",
-    vuela: true,
-    color: Color.red
-  },
-  {
-    nombre: "Batman",
-    vuela: false,
-    color: Color.yellow
-  },
-  {
-    nombre: "Flash",
-    vuela: true,
-    color: Color.red
-  },
-  {
-    nombre: "Linterna Verde",
-    vuela: true,
-    color: Color.green
-  }
-];
+  heroes: Heroe[] = [
+    {
+      nombre: 'Aquaman',
+      vuela: false,
+      color: Color.blue
+    },
+    {
+      nombre: 'Superman',
+      vuela: true,
+      color: Color.red
+    },
+    {
+      nombre: 'Batman',
+      vuela: false,
+      color: Color.yellow
+    },
+    {
+      nombre: 'Flash',
+      vuela: true,
+      color: Color.red
+    },
+    {
+      nombre: 'Linterna Verde',
+      vuela: true,
+      color: Color.green
+    }
+  ];
 
   changeMayusucla() {
     this.enMayusucla = !this.enMayusucla;
@@ -45,7 +45,4 @@ export class OrdenarComponent {
   changeOrderTo(orderBy: string) {
     this.orderBy = orderBy;
   }
-
 }
-
-

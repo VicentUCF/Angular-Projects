@@ -13,7 +13,6 @@ import { MaterialModule } from '../material/material.module';
 import { HeroeTargetaComponent } from './components/heroe-targeta/heroe-targeta.component';
 import { ImagePipe } from './pipes/image.pipe';
 
-
 @NgModule({
   declarations: [
     AgregarComponent,
@@ -22,7 +21,7 @@ import { ImagePipe } from './pipes/image.pipe';
     HeroeComponent,
     BuscarComponent,
     HeroeTargetaComponent,
-    ImagePipe,
+    ImagePipe
   ],
   imports: [
     CommonModule,
@@ -31,7 +30,6 @@ import { ImagePipe } from './pipes/image.pipe';
     MaterialModule,
     FormsModule
   ],
-  providers: [
-  ],
+  providers: []
 })
-export class HeroesModule { }
+export class HeroesModule {}

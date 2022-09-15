@@ -9,18 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroesService } from './heroes/services/heroes.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ErrorPageComponent,
-  ],
+  declarations: [AppComponent, ErrorPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

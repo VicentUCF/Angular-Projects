@@ -13,11 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'numeros',
-    component: NumerosComponent,
+    component: NumerosComponent
   },
   {
     path: 'no-comunes',
-    component: NoComunesComponent,
+    component: NoComunesComponent
   },
   {
     path: 'ordenar',
@@ -27,14 +27,10 @@ const routes: Routes = [
     path: '**',
     redirectTo: ''
   }
-]
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports:[
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRouterModule { }
+export class AppRouterModule {}

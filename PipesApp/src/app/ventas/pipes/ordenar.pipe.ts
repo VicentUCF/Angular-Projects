@@ -5,19 +5,16 @@ import { Heroe } from '../interfaces/ventas.interfaces';
   name: 'ordenar'
 })
 export class OrdenarPipe implements PipeTransform {
-
-  transform(heroes: Heroe[], orderBy?:string): Heroe[] {
-
+  transform(heroes: Heroe[], orderBy?: string): Heroe[] {
     switch (orderBy) {
       case 'nombre':
         return heroes.sort((a, b) => a.nombre.localeCompare(b.nombre));
       case 'vuela':
-        return heroes.sort((a, b) => (a.vuela > b.vuela) ? 1 : -1);
+        return heroes.sort((a, b) => (a.vuela > b.vuela ? 1 : -1));
       case 'color':
         return heroes.sort((a, b) => a.color - b.color);
       default:
         return heroes;
     }
   }
-
 }

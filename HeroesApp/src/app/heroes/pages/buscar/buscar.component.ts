@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { Heroe } from '../../interfaces/heroes.interface';
 import { HeroesService } from '../../services/heroes.service';
@@ -8,27 +8,21 @@ import { HeroesService } from '../../services/heroes.service';
   templateUrl: './buscar.component.html',
   styleUrls: ['./buscar.component.css']
 })
-export class BuscarComponent implements OnInit {
-
-  termino: string = '';
+export class BuscarComponent {
+  termino = '';
   heroes: Heroe[] = [];
   heroeSeleccionado: Heroe | undefined;
 
-  constructor(private heroesService:HeroesService) { }
+  constructor(private heroesService: HeroesService) {}
 
-  ngOnInit(): void {
-    
-  }
-
-  buscando(){
+  buscando() {
     this.heroesService.getSugerencias(this.termino).subscribe((heroes) => {
       this.heroes = heroes;
-    })
+    });
   }
 
-  opcionSelecionada(event: MatAutocompleteSelectedEvent){
-
-    if(!event.option.value){
+  opcionSelecionada(event: MatAutocompleteSelectedEvent) {
+    if (!event.option.value) {
       console.log('no hay ningun valor');
       this.heroeSeleccionado = undefined;
       return;
@@ -37,10 +31,8 @@ export class BuscarComponent implements OnInit {
     const heroe: Heroe = event.option.value;
     this.termino = heroe.superhero;
 
-    this.heroesService.getHeroe(heroe.id!).subscribe((heroe) => {
+    this.heroesService.getHeroe(heroe.id || '').subscribe((heroe) => {
       this.heroeSeleccionado = heroe;
     });
-
   }
-
 }
