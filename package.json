@@ -14,9 +14,14 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --workspace=HeroesApp",
-    "start": "npm run start --workspace=HeroesApp"
+    "start": "npm run start --workspace=HeroesApp",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "express": "4.18.1",
+    "path": "0.12.7"
+  }
 }
