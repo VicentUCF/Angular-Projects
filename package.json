@@ -4,10 +4,8 @@
   "version": "1.0.0",
   "description": "",
   "workspaces": [
-    "HeroesApp",
-    "PaisesApp",
-    "PipesApp",
-    "BaseComponents"
+    "packages/**",
+    "projects/**"
   ],
   "engines": {
     "node": "v18.9.0"
