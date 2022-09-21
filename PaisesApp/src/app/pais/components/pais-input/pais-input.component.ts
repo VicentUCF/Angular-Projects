@@ -21,6 +21,11 @@ export class PaisInputComponent implements OnInit {
 
   termino = '';
 
+  eliminar() {
+    this.termino = '';
+    this.onEnter.emit(this.termino);
+  }
+
   buscar() {
     this.onEnter.emit(this.termino);
   }
