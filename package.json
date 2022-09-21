@@ -18,7 +18,9 @@
     "start": "npm run start --workspace=HeroesApp",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "co": "sui-mono commit"
+    "co": "sui-mono commit",
+    "release": "npx sui-mono release --github-user VicentUCF --github-email vicentciscar17@gmail.com --github-token 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"
+
   },
   "keywords": [],
   "author": "",
