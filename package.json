@@ -6,7 +6,8 @@
   "workspaces": [
     "HeroesApp",
     "PaisesApp",
-    "PipesApp"
+    "PipesApp",
+    "BaseComponents"
   ],
   "engines": {
     "node": "v18.9.0"
